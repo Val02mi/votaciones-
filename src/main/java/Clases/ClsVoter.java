@@ -2,14 +2,13 @@ package Clases;
 
 /**
  *
- * @author danie
+ * @lina y valeria
  */
 public class ClsVoter extends ClsPerson {
 
-    public ClsVoter(String documentNumber, String name, Long phone, String mail, String address, String type_document) {
-        super(documentNumber, name, phone, mail, address, type_document);
-    }
-    
+ public ClsVoter(String documentNumber, String name, Long phone, String mail, String address){
+     super(documentNumber, name, phone, mail, address);
+ }
     
     
 }

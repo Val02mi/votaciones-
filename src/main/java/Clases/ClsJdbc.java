@@ -3,10 +3,7 @@ package Clases;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-/**
- *
- * @author danie
- */
+
 public class ClsJdbc {
     
     String driver = "com.mysql.cj.jdbc.Driver";

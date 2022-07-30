@@ -7,10 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.LinkedList;
 
-/**
- *
- * @author danie
- */
+
 public class MdlCandidate {
 
     // Declarar conexión
@@ -95,15 +92,15 @@ public class MdlCandidate {
             int candidateAddResult = candidateSentence.executeUpdate();
 
             if (candidateAddResult >= 1) {
-                message = new ClsMessage(ClsMessage.OK, "Profile has been created");
+                message = new ClsMessage(ClsMessage.OK, "El registro ha sido exitoso");
             } else {
-                message = new ClsMessage(ClsMessage.ERROR, "Profile has not been created");
+                message = new ClsMessage(ClsMessage.ERROR, "Error en el registro");
             }
 
             return message;
 
         } catch (Exception e) {
-            message = new ClsMessage(ClsMessage.WARNING, "Warning: " + e.getMessage());
+            message = new ClsMessage(ClsMessage.WARNING, "Error" );
             return message;
         }
 
@@ -123,15 +120,15 @@ public class MdlCandidate {
             int candidateDeleteResult = candidateSentence.executeUpdate();
 
             if (candidateDeleteResult >= 1) {
-                message = new ClsMessage(ClsMessage.OK, "Profile has been deleted");
+                message = new ClsMessage(ClsMessage.OK, "El candidato ha sido eliminado");
             } else {
-                message = new ClsMessage(ClsMessage.ERROR, "Profile has not been deleted");
+                message = new ClsMessage(ClsMessage.ERROR, "No se pudo eliminar candidato");
             }
 
             return message;
 
         } catch (Exception e) {
-            message = new ClsMessage(ClsMessage.WARNING, "Warning: " + e.getMessage());
+            message = new ClsMessage(ClsMessage.WARNING, "Error" );
             return message;
         }
         
@@ -164,16 +161,16 @@ public class MdlCandidate {
 
             if (candidateUpResult >= 1) {
 
-                message = new ClsMessage(ClsMessage.OK, "Profile has been updated");
+                message = new ClsMessage(ClsMessage.OK, "Actualización completa");
                 return message;
             }
 
-            message = new ClsMessage(ClsMessage.ERROR, "Profile has not been updated");
+            message = new ClsMessage(ClsMessage.ERROR, "Error en actualizacion");
             return message;
 
         } catch (Exception e) {
 
-            message = new ClsMessage(ClsMessage.ERROR, "Warning: " + e.getMessage());
+            message = new ClsMessage(ClsMessage.ERROR, "Error" );
             return message;
         }
 

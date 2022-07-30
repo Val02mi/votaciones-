@@ -22,4 +22,5 @@
         <maven.compiler.target>17</maven.compiler.target>
         <exec.mainClass>com.mycompany.eleccionesg8.EleccionesG8</exec.mainClass>
     </properties>
+    <name>Votaciones</name>
 </project>

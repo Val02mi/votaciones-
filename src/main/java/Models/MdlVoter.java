@@ -7,10 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.LinkedList;
 
-/**
- *
- * @author danie
- */
+
 public class MdlVoter {
     
     // Declarar conexión
@@ -32,7 +29,7 @@ public class MdlVoter {
 
         try {
 
-            String voterSQLAdd = "INSERT INTO tb_voters VALUES (?, ?, ?, ?, ?, ?)";
+            String voterSQLAdd = "INSERT INTO tb_voters VALUES (?, ?, ?, ?, ?)";
             PreparedStatement voterSentence = this.voterJdbc.connectDBElectionsG8.prepareStatement(voterSQLAdd);
             
             voterSentence.setString(1, voterObj.getDocumentNumber());
@@ -40,20 +37,20 @@ public class MdlVoter {
             voterSentence.setLong(3, voterObj.getPhone());
             voterSentence.setString(4, voterObj.getMail());
             voterSentence.setString(5, voterObj.getAddress());
-            voterSentence.setString(6, voterObj.getType_document());
+            //voterSentence.setString(6, voterObj.getType_document());
 
             int voterAddResult = voterSentence.executeUpdate();
 
             if (voterAddResult >= 1) {
-                message = new ClsMessage(ClsMessage.OK, "Voter profile has been created");
+                message = new ClsMessage(ClsMessage.OK, "El registro ha sido exitoso");
             } else {
-                message = new ClsMessage(ClsMessage.ERROR, "Voter profile has not been created");
+                message = new ClsMessage(ClsMessage.ERROR, "Error en el registro");
             }
 
             return message;
 
         } catch (Exception e) {
-            message = new ClsMessage(ClsMessage.WARNING, "Warning at voter: " + e.getMessage());
+            message = new ClsMessage(ClsMessage.WARNING, "Error " + e.getMessage());
             return message;
         }
 
@@ -87,10 +84,10 @@ public class MdlVoter {
                 long phone = voterResult.getLong("phone");
                 String mail = voterResult.getString("mail");
                 String address = voterResult.getString("address");
-                String type_document = voterResult.getString("type_document");
+                //String type_document = voterResult.getString("type_document");
 
                 // 9 M - Creamos objeto / 11 M - Enviar a constructor de votante
-                ClsVoter voterModelResult = new ClsVoter(documentNumber, name, phone, mail, address, type_document);
+                ClsVoter voterModelResult = new ClsVoter(documentNumber, name, phone, mail, address);
 
                 // 12 M - Creamos lista y agregamos votante
                 voterList.add(voterModelResult);
@@ -119,15 +116,15 @@ public class MdlVoter {
             int voterDeleteResult = voterSentence.executeUpdate();
 
             if (voterDeleteResult >= 1) {
-                message = new ClsMessage(ClsMessage.OK, "Profile has been deleted");
+                message = new ClsMessage(ClsMessage.OK, "Se elimino correctamente");
             } else {
-                message = new ClsMessage(ClsMessage.ERROR, "Profile has not been deleted");
+                message = new ClsMessage(ClsMessage.ERROR, "No se pudo eliminar");
             }
 
             return message;
 
         } catch (Exception e) {
-            message = new ClsMessage(ClsMessage.WARNING, "Warning: " + e.getMessage());
+            message = new ClsMessage(ClsMessage.WARNING, "Error" );
             return message;
         }
         
@@ -140,7 +137,7 @@ public class MdlVoter {
         
         try {
             String voterSQLUpdate = "UPDATE tb_voters SET name = ?," +
-                    " phone = ?, mail = ?, address = ?, type_document = ?" +
+                    " phone = ?, mail = ?, address = ? "+
                     " WHERE id_voter = ?";
             PreparedStatement voterSentenceUpdate = this.voterJdbc.connectDBElectionsG8.prepareStatement(voterSQLUpdate);
             
@@ -148,8 +145,8 @@ public class MdlVoter {
             voterSentenceUpdate.setLong(2, voterUpdate.getPhone());
             voterSentenceUpdate.setString(3, voterUpdate.getMail());
             voterSentenceUpdate.setString(4, voterUpdate.getAddress());
-            voterSentenceUpdate.setString(5, voterUpdate.getType_document());
-            voterSentenceUpdate.setString(6, voterUpdate.getDocumentNumber());
+            //voterSentenceUpdate.setString(5, voterUpdate.getType_document());
+            voterSentenceUpdate.setString(5, voterUpdate.getDocumentNumber());
             
             
            
@@ -157,16 +154,16 @@ public class MdlVoter {
 
             if (voterUpResult >= 1) {
 
-                message = new ClsMessage(ClsMessage.OK, "Profile has been updated");
+                message = new ClsMessage(ClsMessage.OK, "Actualización completa");
                 return message;
             }
 
-            message = new ClsMessage(ClsMessage.ERROR, "Profile has not been updated");
+            message = new ClsMessage(ClsMessage.ERROR, "");
             return message;
 
         } catch (Exception e) {
 
-            message = new ClsMessage(ClsMessage.ERROR, "Warning: " + e.getMessage());
+            message = new ClsMessage(ClsMessage.ERROR, "Error " );
             return message;
         }
 

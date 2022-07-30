@@ -1,9 +1,7 @@
 package Clases;
 
-/**
- *
- * @author danie
- */
+
+ 
 public class ClsMessage {
 
     public static final String OK = "OK";

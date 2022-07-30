@@ -8,10 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author danie
- */
+
 public class VoterView extends javax.swing.JFrame {
     
     // Declarar variable / Crear un objeto
@@ -55,16 +52,12 @@ public class VoterView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         voterForm = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
-        comboTipoDocumento = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         campoNombre = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -80,20 +73,14 @@ public class VoterView extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         voterTable = new javax.swing.JTable();
-        jButtonVoterEdit = new javax.swing.JButton();
         jButtonVoterDelete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(409, 534));
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel1.setText("Versión 1.0");
-        jLabel1.setFocusable(false);
-
-        jButton1.setBackground(new java.awt.Color(255, 204, 0));
+        jButton1.setBackground(new java.awt.Color(250, 225, 225));
         jButton1.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         jButton1.setForeground(new java.awt.Color(102, 51, 0));
         jButton1.setText("Regresar");
@@ -107,42 +94,24 @@ public class VoterView extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel2.setText("Registro Votante");
+        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel2.setText("Gestor Votante");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel3.setText("Espacio para agregar votante");
-
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        comboTipoDocumento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione:", "--", "Cédula de ciudadanía", "Tarjeta de identidad" }));
-        comboTipoDocumento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboTipoDocumentoActionPerformed(evt);
-            }
-        });
+        jLabel4.setText("Cedula");
 
-        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setText("Número de documento:");
-
-        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel5.setText("Tipo de documento:");
-
-        jLabel6.setForeground(new java.awt.Color(102, 102, 102));
         jLabel6.setText("Nombre:");
 
-        jLabel7.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel7.setText("Teléfono:");
+        jLabel7.setText("Teléfono");
 
-        jLabel8.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel8.setText("Correo electrónico:");
+        jLabel8.setText("Correo electrónico");
 
-        jButtonVoterAdd.setBackground(new java.awt.Color(204, 204, 255));
+        jButtonVoterAdd.setBackground(new java.awt.Color(249, 224, 224));
         jButtonVoterAdd.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
-        jButtonVoterAdd.setForeground(new java.awt.Color(0, 102, 255));
+        jButtonVoterAdd.setForeground(new java.awt.Color(153, 0, 0));
         jButtonVoterAdd.setText("Agregar");
         jButtonVoterAdd.setBorderPainted(false);
         jButtonVoterAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -151,9 +120,8 @@ public class VoterView extends javax.swing.JFrame {
             }
         });
 
-        jButtonVoterUpdate.setBackground(new java.awt.Color(0, 204, 51));
+        jButtonVoterUpdate.setBackground(new java.awt.Color(250, 224, 224));
         jButtonVoterUpdate.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
-        jButtonVoterUpdate.setForeground(new java.awt.Color(255, 255, 255));
         jButtonVoterUpdate.setText("Actualizar");
         jButtonVoterUpdate.setBorderPainted(false);
         jButtonVoterUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -162,9 +130,9 @@ public class VoterView extends javax.swing.JFrame {
             }
         });
 
-        jButtonVoterNew.setBackground(new java.awt.Color(0, 102, 255));
+        jButtonVoterNew.setBackground(new java.awt.Color(245, 220, 224));
         jButtonVoterNew.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
-        jButtonVoterNew.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonVoterNew.setForeground(new java.awt.Color(102, 0, 0));
         jButtonVoterNew.setText("Nuevo");
         jButtonVoterNew.setBorderPainted(false);
         jButtonVoterNew.addActionListener(new java.awt.event.ActionListener() {
@@ -173,8 +141,7 @@ public class VoterView extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel9.setText("Dirección:");
+        jLabel9.setText("Dirección");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -183,36 +150,27 @@ public class VoterView extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(campoCorreo)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jButtonVoterAdd)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                         .addComponent(jButtonVoterNew)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonVoterUpdate))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(comboTipoDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5)
                                 .addComponent(jLabel6)
-                                .addComponent(campoNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
-                                .addComponent(campoCorreo))
-                            .addComponent(jLabel8))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(campoTelefono)
-                                    .addComponent(campoCedula)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel9)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jLabel7))
-                                        .addGap(0, 21, Short.MAX_VALUE))))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(campoDireccion)))))
+                                .addComponent(jLabel8)
+                                .addComponent(campoNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                                .addComponent(campoDireccion))
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel4)
+                            .addComponent(campoCedula, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                            .addComponent(jLabel7)
+                            .addComponent(campoTelefono))))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -221,63 +179,48 @@ public class VoterView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(comboTipoDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(campoCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
+                    .addComponent(jLabel7)
                     .addComponent(jLabel9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(campoDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(campoCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonVoterAdd)
                     .addComponent(jButtonVoterUpdate)
                     .addComponent(jButtonVoterNew))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         voterForm.addTab("Formulario", jPanel3);
 
-        jPanel4.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
         voterTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Cédula", "Nombre", "Teléfono", "Correo electrónico", "Dirección", "Tipo documento"
+                "Cédula", "Nombre", "Teléfono", "Correo electrónico", "Dirección"
             }
         ));
         jScrollPane1.setViewportView(voterTable);
 
-        jButtonVoterEdit.setBackground(new java.awt.Color(0, 204, 51));
-        jButtonVoterEdit.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        jButtonVoterEdit.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonVoterEdit.setText("Editar");
-        jButtonVoterEdit.setBorderPainted(false);
-        jButtonVoterEdit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonVoterEditActionPerformed(evt);
-            }
-        });
-
-        jButtonVoterDelete.setBackground(new java.awt.Color(255, 204, 0));
+        jButtonVoterDelete.setBackground(new java.awt.Color(242, 223, 223));
         jButtonVoterDelete.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
-        jButtonVoterDelete.setForeground(new java.awt.Color(255, 0, 0));
+        jButtonVoterDelete.setForeground(new java.awt.Color(153, 0, 0));
         jButtonVoterDelete.setText("Eliminar");
         jButtonVoterDelete.setBorderPainted(false);
         jButtonVoterDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -291,27 +234,20 @@ public class VoterView extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonVoterDelete)
-                        .addGap(162, 162, 162)
-                        .addComponent(jButtonVoterEdit))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonVoterDelete)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonVoterEdit)
-                    .addComponent(jButtonVoterDelete))
-                .addGap(26, 26, 26))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addComponent(jButtonVoterDelete)
+                .addGap(25, 25, 25))
         );
 
         voterForm.addTab("Lista", jPanel4);
@@ -344,31 +280,23 @@ public class VoterView extends javax.swing.JFrame {
                         .addComponent(jButton1)
                         .addGap(74, 74, 74))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel3))
-                            .addComponent(jLabel1))
-                        .addGap(39, 39, 39))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(115, 115, 115)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1)
-                .addGap(55, 55, 55))
+                .addGap(94, 94, 94))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -391,10 +319,6 @@ public class VoterView extends javax.swing.JFrame {
         this.ObjMainMenu.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void comboTipoDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTipoDocumentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboTipoDocumentoActionPerformed
-
     private void jButtonVoterAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoterAddActionPerformed
         // BUTTON: ADD
         
@@ -403,9 +327,9 @@ public class VoterView extends javax.swing.JFrame {
         long phone = Long.parseLong(this.campoTelefono.getText());
         String mail = this.campoCorreo.getText();
         String address = this.campoDireccion.getText();
-        String type_document = this.comboTipoDocumento.getSelectedItem().toString();
+        //String type_document = this.comboTipoDocumento.getSelectedItem().toString();
         
-        ClsVoter voterObj = new ClsVoter(documentNumber, name, phone, mail, address, type_document);
+      ClsVoter voterObj = new ClsVoter(documentNumber, name, phone, mail, address);
         
         ClsMessage message = this.voterControler.voterAdd(voterObj);
         
@@ -443,7 +367,7 @@ public class VoterView extends javax.swing.JFrame {
         
     }
     
-    // Método / Función actualizar tabla
+    
     public void UpdateJtb_voter(LinkedList<ClsVoter> updateVoters){
         
         // Importamos para llenar tabla
@@ -452,7 +376,7 @@ public class VoterView extends javax.swing.JFrame {
         
         for (ClsVoter updateVoter : updateVoters) {
             
-            Object[] voterRow = {updateVoter.getDocumentNumber(), updateVoter.getName(), updateVoter.getPhone(), updateVoter.getMail(), updateVoter.getAddress(), updateVoter.getType_document()};
+            Object[] voterRow = {updateVoter.getDocumentNumber(), updateVoter.getName(), updateVoter.getPhone(), updateVoter.getMail(), updateVoter.getAddress()};
             
             voterModel.addRow(voterRow);
             
@@ -463,34 +387,6 @@ public class VoterView extends javax.swing.JFrame {
     
     
     
-    private void jButtonVoterEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoterEditActionPerformed
-        // BUTTON: EDIT 
-        this.voterForm.setSelectedIndex(0);
-        
-        int voterColumn = 0;
-        int voterRow = this.voterTable.getSelectedRow();
-        String voterId = this.voterTable.getValueAt(voterRow, voterColumn).toString();
-        
-        ClsVoter voterSearchEdit = this.VoterSearch(voterId);
-        
-        if (voterSearchEdit != null){
-            
-            this.campoCedula.setEnabled(false);
-            this.jButtonVoterAdd.setVisible(false);
-            
-            this.jButtonVoterUpdate.setVisible(true);
-            this.jButtonVoterNew.setVisible(true);
-            
-            this.campoCedula.setText(voterSearchEdit.getDocumentNumber());
-            this.campoNombre.setText(voterSearchEdit.getName());
-            this.campoTelefono.setText(String.valueOf(voterSearchEdit.getPhone()));
-            this.campoCorreo.setText(voterSearchEdit.getMail());
-            this.comboTipoDocumento.setSelectedItem(voterSearchEdit.getType_document());
-            
-        }
-        
-    }//GEN-LAST:event_jButtonVoterEditActionPerformed
-
     private void jButtonVoterDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoterDeleteActionPerformed
         // BUTTON: DELETE
         int voterColumn = 0;
@@ -527,7 +423,7 @@ public class VoterView extends javax.swing.JFrame {
         this.campoTelefono.setText("");
         this.campoCorreo.setText("");
         this.campoDireccion.setText("");
-        this.comboTipoDocumento.setSelectedItem(null);
+        //this.comboTipoDocumento.setSelectedItem(null);
         
     }//GEN-LAST:event_jButtonVoterNewActionPerformed
 
@@ -539,9 +435,9 @@ public class VoterView extends javax.swing.JFrame {
         long phone = Long.parseLong(this.campoTelefono.getText());
         String mail = this.campoCorreo.getText();
         String address = this.campoDireccion.getText();
-        String type_document = this.comboTipoDocumento.getSelectedItem().toString();
+       // String type_document = this.comboTipoDocumento.getSelectedItem().toString();
 
-        ClsVoter voterUpdate = new ClsVoter(documentNumber, name, phone, mail, address, type_document);
+        ClsVoter voterUpdate = new ClsVoter(documentNumber, name, phone, mail, address);
         
         ClsMessage message = this.voterControler.VoterUpdate(voterUpdate);
 
@@ -608,18 +504,13 @@ public class VoterView extends javax.swing.JFrame {
     private javax.swing.JTextField campoDireccion;
     private javax.swing.JTextField campoNombre;
     private javax.swing.JTextField campoTelefono;
-    private javax.swing.JComboBox<String> comboTipoDocumento;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonVoterAdd;
     private javax.swing.JButton jButtonVoterDelete;
-    private javax.swing.JButton jButtonVoterEdit;
     private javax.swing.JButton jButtonVoterNew;
     private javax.swing.JButton jButtonVoterUpdate;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

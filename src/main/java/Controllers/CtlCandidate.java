@@ -5,10 +5,7 @@ import Clases.ClsMessage;
 import Models.MdlCandidate;
 import java.util.LinkedList;
 
-/**
- *
- * @author danie
- */
+
 public class CtlCandidate {
     
     // Crear / Declarar Objeto

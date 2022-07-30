@@ -7,11 +7,11 @@ import java.util.LinkedList;
 
 /**
  *
- * @author danie
+ * @author valeria y lina
  */
 public class CtlVoter {
     
-    // Crear / Declarar Objeto
+    
     MdlVoter voterModel;
 
     public CtlVoter() {
