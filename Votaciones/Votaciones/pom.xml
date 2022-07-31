@@ -23,7 +23,4 @@
         <exec.mainClass>com.mycompany.eleccionesg8.EleccionesG8</exec.mainClass>
     </properties>
     <name>Votaciones</name>
-    <modules>
-        <module>Votaciones</module>
-    </modules>
 </project>
